@@ -1,0 +1,1131 @@
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f5f7fb;
+  color: #172033;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+
+
+/* =====================================================
+   LOGIN PAGE
+===================================================== */
+
+.app {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #eef3f9, #f8fafc);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 460px;
+}
+
+.login-card {
+  background: white;
+  border-radius: 18px;
+  padding: 45px;
+  box-shadow: 0 15px 45px rgba(15, 35, 65, 0.12);
+  border: 1px solid #e5eaf1;
+}
+
+.login-logo {
+  width: 58px;
+  height: 58px;
+  border-radius: 14px;
+  background: #173b68;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 15px;
+  margin-bottom: 24px;
+}
+
+.login-card h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #172b4d;
+}
+
+.login-card h2 {
+  margin: 6px 0 0;
+  font-size: 21px;
+  font-weight: 500;
+  color: #53647a;
+}
+
+.login-subtitle {
+  margin: 12px 0 30px;
+  color: #6b778c;
+  font-size: 14px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #344054;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d5dce6;
+  border-radius: 9px;
+  font-size: 15px;
+  outline: none;
+  background: #fff;
+}
+
+.form-group input:focus {
+  border-color: #315d8c;
+  box-shadow: 0 0 0 3px rgba(49, 93, 140, 0.1);
+}
+
+.login-button {
+  width: 100%;
+  border: none;
+  border-radius: 9px;
+  padding: 14px;
+  background: #173b68;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.login-button:hover {
+  background: #0f2f57;
+}
+
+.login-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.login-error {
+  background: #fff1f1;
+  color: #c0392b;
+  border: 1px solid #f1c4c4;
+  padding: 11px 13px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.login-note {
+  margin-top: 28px;
+  padding-top: 20px;
+  border-top: 1px solid #edf0f4;
+}
+
+.login-note strong {
+  font-size: 13px;
+  color: #344054;
+}
+
+.login-note p {
+  margin: 6px 0 0;
+  font-size: 12px;
+  color: #7a8699;
+}
+
+
+/* =====================================================
+   DASHBOARD PAGE
+===================================================== */
+
+.dashboard-page {
+  min-height: 100vh;
+  display: flex;
+  background: #f5f7fb;
+}
+
+
+/* =====================================================
+   SIDEBAR
+===================================================== */
+
+.dashboard-sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #102a43;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  padding: 25px 18px;
+}
+
+.dashboard-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 5px 8px 30px;
+}
+
+.dashboard-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: #2f6690;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.dashboard-brand h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dashboard-brand p {
+  margin: 4px 0 0;
+  font-size: 11px;
+  color: #b9c8d8;
+}
+
+.dashboard-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.nav-item {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #c7d3df;
+  padding: 12px 14px;
+  border-radius: 8px;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.2s;
+}
+
+.nav-item span {
+  width: 20px;
+  text-align: center;
+}
+
+.nav-item:hover {
+  background: #193b59;
+  color: white;
+}
+
+.nav-item.active {
+  background: #28577d;
+  color: white;
+}
+
+.sidebar-bottom {
+  margin-top: auto;
+}
+
+.clinical-note {
+  background: #183b59;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 18px;
+}
+
+.clinical-note strong {
+  display: block;
+  font-size: 12px;
+  margin-bottom: 7px;
+}
+
+.clinical-note p {
+  margin: 0;
+  color: #bdcad7;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+.logout-button {
+  width: 100%;
+  border: 1px solid #3a5973;
+  background: transparent;
+  color: #d6e0e9;
+  padding: 11px 14px;
+  border-radius: 8px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.logout-button:hover {
+  background: #193b59;
+  color: white;
+}
+
+
+/* =====================================================
+   MAIN AREA
+===================================================== */
+
+.dashboard-main {
+  margin-left: 260px;
+  width: calc(100% - 260px);
+  min-height: 100vh;
+  padding: 35px 45px 25px;
+}
+
+
+/* =====================================================
+   HEADER
+===================================================== */
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.dashboard-overline {
+  margin: 0 0 8px;
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+  color: #55708d;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #172b4d;
+}
+
+.dashboard-header > div:first-child > p:last-child {
+  margin: 9px 0 0;
+  color: #718096;
+  font-size: 14px;
+}
+
+.doctor-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  border: 1px solid #e3e8ef;
+  padding: 10px 15px;
+  border-radius: 12px;
+  min-width: 220px;
+}
+
+.doctor-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #dce8f3;
+  color: #173b68;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.doctor-profile strong {
+  display: block;
+  font-size: 14px;
+  color: #27364b;
+}
+
+.doctor-profile span {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #7a8699;
+}
+
+
+/* =====================================================
+   STAT CARDS
+===================================================== */
+
+.dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #e4e9f0;
+  border-radius: 13px;
+  padding: 22px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 14px rgba(20, 40, 70, 0.04);
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 11px;
+  background: #edf3f8;
+  color: #315d8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 12px;
+  color: #78879a;
+  margin-bottom: 5px;
+}
+
+.stat-card strong {
+  display: block;
+  font-size: 24px;
+  color: #172b4d;
+}
+
+.stat-card .status-ready {
+  font-size: 18px;
+  color: #287d57;
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+.dashboard-section {
+  margin-bottom: 32px;
+}
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.section-heading h2 {
+  margin: 0;
+  color: #24364b;
+  font-size: 19px;
+}
+
+.section-heading p {
+  margin: 5px 0 0;
+  color: #7a8699;
+  font-size: 13px;
+}
+
+.view-all-button {
+  border: none;
+  background: transparent;
+  color: #315d8c;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   QUICK ACTIONS
+===================================================== */
+
+.quick-actions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.action-card {
+  background: white;
+  border: 1px solid #e3e8ef;
+  border-radius: 12px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.action-card:hover {
+  border-color: #b8cadc;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(20, 40, 70, 0.07);
+}
+
+.action-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 9px;
+  background: #edf3f8;
+  color: #315d8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 20px;
+}
+
+.action-card > div:nth-child(2) {
+  flex: 1;
+}
+
+.action-card strong {
+  display: block;
+  color: #26384d;
+  font-size: 14px;
+}
+
+.action-card span {
+  display: block;
+  margin-top: 5px;
+  color: #7b8797;
+  font-size: 11px;
+  line-height: 1.4;
+}
+
+.action-card b {
+  color: #315d8c;
+  font-size: 18px;
+}
+
+
+/* =====================================================
+   PATIENT CARD
+===================================================== */
+
+.patients-card {
+  background: white;
+  border: 1px solid #e3e8ef;
+  border-radius: 13px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(20, 40, 70, 0.04);
+}
+
+.patients-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.patients-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.patients-table th {
+  background: #f8fafc;
+  color: #66768a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 14px 18px;
+  text-align: left;
+  border-bottom: 1px solid #e7ebf0;
+}
+
+.patients-table td {
+  padding: 16px 18px;
+  border-bottom: 1px solid #edf0f4;
+  color: #44546a;
+  font-size: 13px;
+}
+
+.patients-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.patients-table tbody tr:hover {
+  background: #fafbfd;
+}
+
+.patient-name {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.patient-avatar {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #e7eff6;
+  color: #315d8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.patient-name strong {
+  display: block;
+  color: #27364b;
+  font-size: 13px;
+}
+
+.patient-name span {
+  display: block;
+  margin-top: 4px;
+  color: #8995a5;
+  font-size: 10px;
+}
+
+.patient-action {
+  border: 1px solid #cbd8e5;
+  background: white;
+  color: #315d8c;
+  padding: 7px 11px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.patient-action:hover {
+  background: #edf3f8;
+}
+
+
+/* =====================================================
+   EMPTY / ERROR STATES
+===================================================== */
+
+.empty-state {
+  padding: 50px 20px;
+  text-align: center;
+  color: #7b8797;
+}
+
+.empty-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: #edf3f8;
+  color: #315d8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 12px;
+  font-size: 21px;
+}
+
+.empty-state h3 {
+  margin: 0;
+  color: #344054;
+  font-size: 15px;
+}
+
+.empty-state p {
+  margin: 7px 0 0;
+  font-size: 12px;
+}
+
+.error-dashboard {
+  padding: 25px;
+  color: #b42318;
+  background: #fff4f2;
+  font-size: 13px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+.dashboard-footer {
+  border-top: 1px solid #e2e7ed;
+  padding-top: 18px;
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+  color: #8995a5;
+  font-size: 10px;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+  .dashboard-sidebar {
+    width: 220px;
+  }
+
+  .dashboard-main {
+    margin-left: 220px;
+    width: calc(100% - 220px);
+    padding: 30px;
+  }
+
+  .dashboard-stats,
+  .quick-actions {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .dashboard-sidebar {
+    position: relative;
+    width: 100%;
+    min-height: auto;
+  }
+
+  .dashboard-page {
+    flex-direction: column;
+  }
+
+  .dashboard-main {
+    margin-left: 0;
+    width: 100%;
+    padding: 25px 18px;
+  }
+
+  .dashboard-footer {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+}
+/* =====================================================
+   PATIENT DETAILS
+===================================================== */
+
+.patient-details-card {
+  background: white;
+  border: 1px solid #e3e8ef;
+  border-radius: 13px;
+  padding: 25px;
+  box-shadow: 0 4px 14px rgba(20, 40, 70, 0.04);
+}
+
+.patient-details-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 22px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid #edf0f4;
+}
+
+.large-patient-avatar {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #e7eff6;
+  color: #315d8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.patient-details-header h2 {
+  margin: 0;
+  color: #24364b;
+  font-size: 21px;
+}
+
+.patient-details-header p {
+  margin: 5px 0 0;
+  color: #8995a5;
+  font-size: 12px;
+}
+
+.patient-details-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.detail-item {
+  background: #f8fafc;
+  border: 1px solid #edf0f4;
+  border-radius: 9px;
+  padding: 15px;
+}
+
+.detail-item span {
+  display: block;
+  color: #7a8699;
+  font-size: 11px;
+  margin-bottom: 7px;
+}
+
+.detail-item strong {
+  display: block;
+  color: #26384d;
+  font-size: 14px;
+}
+
+
+/* =====================================================
+   RESPONSIVE PATIENT DETAILS
+===================================================== */
+
+@media (max-width: 900px) {
+
+  .patient-details-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .patient-details-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* =====================================================
+   EEG ANALYSIS PAGE
+===================================================== */
+
+.eeg-analysis-card {
+  background: white;
+  border: 1px solid #e3e8ef;
+  border-radius: 13px;
+  padding: 28px;
+  box-shadow: 0 4px 14px rgba(20, 40, 70, 0.04);
+  max-width: 900px;
+}
+
+.analysis-form-group {
+  margin-bottom: 25px;
+}
+
+.analysis-form-group label {
+  display: block;
+  margin-bottom: 9px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #344054;
+}
+
+.analysis-form-group select {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #d5dce6;
+  border-radius: 8px;
+  background: white;
+  color: #344054;
+  font-size: 14px;
+  outline: none;
+}
+
+.analysis-form-group select:focus {
+  border-color: #315d8c;
+  box-shadow: 0 0 0 3px rgba(49, 93, 140, 0.1);
+}
+
+.analysis-loading {
+  padding: 14px;
+  border-radius: 8px;
+  background: #f8fafc;
+  color: #718096;
+  font-size: 13px;
+}
+
+.upload-box {
+  border: 2px dashed #cbd8e5;
+  border-radius: 12px;
+  padding: 35px 25px;
+  text-align: center;
+  background: #fafcfe;
+}
+
+.upload-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background: #edf3f8;
+  color: #315d8c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 23px;
+}
+
+.upload-box h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #344054;
+}
+
+.upload-box p {
+  margin: 7px 0 18px;
+  color: #7a8699;
+  font-size: 12px;
+}
+
+.upload-box input[type="file"] {
+  font-size: 12px;
+  color: #53647a;
+}
+
+.model-info-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin: 25px 0;
+}
+
+.model-info-box > div {
+  padding: 15px;
+  border-radius: 9px;
+  background: #f7f9fc;
+  border: 1px solid #edf0f4;
+}
+
+.model-info-box strong {
+  display: block;
+  color: #66768a;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 7px;
+}
+
+.model-info-box span {
+  display: block;
+  color: #344054;
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.analyse-button {
+  width: 100%;
+  border: none;
+  border-radius: 9px;
+  padding: 14px;
+  background: #173b68;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.analyse-button:hover:not(:disabled) {
+  background: #0f2f57;
+}
+
+.analyse-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.analysis-disclaimer {
+  margin-top: 22px;
+  padding: 15px;
+  border-radius: 9px;
+  background: #f3f7fa;
+  border: 1px solid #dce6ef;
+}
+
+.analysis-disclaimer strong {
+  display: block;
+  color: #344054;
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+
+.analysis-disclaimer p {
+  margin: 0;
+  color: #718096;
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+
+@media (max-width: 800px) {
+
+  .model-info-box {
+    grid-template-columns: 1fr;
+  }
+
+}
+/* ================================
+   EEG ANALYSIS RESULT
+================================ */
+
+.analysis-result-card {
+  margin-top: 24px;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #e3eaf2;
+  border-radius: 14px;
+  box-shadow: 0 4px 14px rgba(20, 55, 90, 0.06);
+}
+
+.result-header {
+  margin-bottom: 20px;
+}
+
+.result-header h2 {
+  margin: 4px 0 0;
+  font-size: 22px;
+  color: #163b63;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.result-item {
+  padding: 16px;
+  background: #f6f9fc;
+  border: 1px solid #e5ebf2;
+  border-radius: 10px;
+}
+
+.result-item span {
+  display: block;
+  font-size: 12px;
+  color: #718096;
+  margin-bottom: 7px;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+
+.result-item strong {
+  display: block;
+  font-size: 15px;
+  color: #163b63;
+}
+
+.analysis-result-card .analysis-disclaimer {
+  margin-top: 20px;
+}
+
+.analysis-error {
+  margin-top: 12px;
+  padding: 12px 16px;
+  background: #fff1f1;
+  border: 1px solid #f2b8b8;
+  border-radius: 8px;
+  color: #b42318;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .result-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================================
+   SEIZURE DETECTION WINDOWS
+================================ */
+
+.seizure-timeline {
+  margin-top: 24px;
+  padding: 20px;
+  background: #f8fafc;
+  border: 1px solid #e3eaf2;
+  border-radius: 12px;
+}
+
+.seizure-timeline .result-header {
+  margin-bottom: 16px;
+}
+
+.seizure-timeline h3 {
+  margin: 4px 0 0;
+  font-size: 18px;
+  color: #163b63;
+}
+
+.seizure-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 13px 16px;
+  margin-top: 8px;
+  background: #ffffff;
+  border: 1px solid #e5ebf2;
+  border-radius: 8px;
+}
+
+.seizure-row div {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.seizure-row div strong {
+  color: #163b63;
+  font-size: 14px;
+}
+
+.seizure-row span {
+  color: #667085;
+  font-size: 14px;
+}
+
+.seizure-row > strong {
+  color: #b42318;
+  font-size: 14px;
+}
